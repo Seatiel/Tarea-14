@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace TareaDetallePeliculas
+namespace TareaDetallePeliculas.UI.Registros
 {
-    public partial class Form1 : Form
+    public partial class rActores : Form
     {
-        public Form1()
+        public rActores()
         {
             InitializeComponent();
         }
