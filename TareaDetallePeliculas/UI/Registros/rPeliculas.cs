@@ -27,10 +27,10 @@ namespace TareaDetallePeliculas.UI.Registros
 
         private void LlenarCombo()
         {
-            List<Actores> lista = new List<Actores>();
-            ActorescomboBox.DataSource = lista;
-            ActorescomboBox.ValueMember = "ActorId";
+            List<Actores> lista = ActoresBLL.GetList();
+            ActorescomboBox.DataSource = lista;            
             ActorescomboBox.DisplayMember = "ActorNombres";
+            ActorescomboBox.ValueMember = "ActorId";
         }
 
         private void LlenarGrid(Peliculas pelicula)

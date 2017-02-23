@@ -13,7 +13,7 @@ namespace TareaDetallePeliculas.UI.Registros
 {
     public partial class rActores : Form
     {
-        Actores actores;
+        
 
         public rActores()
         {
@@ -27,7 +27,8 @@ namespace TareaDetallePeliculas.UI.Registros
         }
 
         private Actores LlenarClase()
-        {            
+        {
+            var actores = new Actores();         
             actores.ActorNombres = ActortextBox.Text;
             return actores;
         }
@@ -50,6 +51,7 @@ namespace TareaDetallePeliculas.UI.Registros
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
+            var actores = new Actores();
             actores = LlenarClase();
             if (!Validar())
             {
@@ -58,7 +60,7 @@ namespace TareaDetallePeliculas.UI.Registros
             }
             else if (ActoresBLL.Guardar(actores))
             {
-                MessageBox.Show("Se ha guardado la Categoria.");
+                MessageBox.Show("Se ha guardado los Actores.");
                 Limpiar();
             }
         }
