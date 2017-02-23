@@ -20,7 +20,7 @@ namespace TareaDetallePeliculas.BLL
                 {
                     pelicula = db.Pelicula.Add(pelicula);
 
-                    foreach (var cat in pelicula.Categorias)
+                    foreach (var cat in pelicula.Actores)
                     {//para evitar que se inserten de nuevo los estudiantes agregados.
                      //por defecto entity framwork lo ve como entidades nuevas. 
                         db.Entry(cat).State = EntityState.Unchanged;
@@ -89,12 +89,12 @@ namespace TareaDetallePeliculas.BLL
                 try
                 {
                     pelicula = db.Pelicula.Find(id);
-                    pelicula.Categorias.Count();
+                    pelicula.Actores.Count();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    MessageBox.Show(ex.ToString());
-                    //throw;
+                    //MessageBox.Show(ex.ToString());
+                    throw;
                 }
                 return pelicula;
             }

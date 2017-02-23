@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.AgregarButton = new System.Windows.Forms.Button();
             this.PeliculasActoresdataGridView = new System.Windows.Forms.DataGridView();
@@ -45,8 +46,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.EstrenoserrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.DescripcionerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PeliculasActoresdataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EstrenoserrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -77,6 +82,7 @@
             this.AgregarButton.TabIndex = 11;
             this.AgregarButton.Text = "Agregar";
             this.AgregarButton.UseVisualStyleBackColor = true;
+            this.AgregarButton.Click += new System.EventHandler(this.AgregarButton_Click);
             // 
             // PeliculasActoresdataGridView
             // 
@@ -150,6 +156,7 @@
             this.Buscarbutton.TabIndex = 34;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // Eliminarbutton
             // 
@@ -162,6 +169,7 @@
             this.Eliminarbutton.TabIndex = 33;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // Guardarbutton
             // 
@@ -174,6 +182,7 @@
             this.Guardarbutton.TabIndex = 32;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Nuevobutton
             // 
@@ -186,6 +195,7 @@
             this.Nuevobutton.TabIndex = 31;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // EstrenostextBox
             // 
@@ -248,6 +258,14 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Peliculas Id:";
             // 
+            // EstrenoserrorProvider
+            // 
+            this.EstrenoserrorProvider.ContainerControl = this;
+            // 
+            // DescripcionerrorProvider
+            // 
+            this.DescripcionerrorProvider.ContainerControl = this;
+            // 
             // rPeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -267,10 +285,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "rPeliculas";
-            this.Text = "rPeliculas";
+            this.Text = "Registro Peliculas";
+            this.Load += new System.EventHandler(this.rPeliculas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PeliculasActoresdataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EstrenoserrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,5 +316,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider EstrenoserrorProvider;
+        private System.Windows.Forms.ErrorProvider DescripcionerrorProvider;
     }
 }

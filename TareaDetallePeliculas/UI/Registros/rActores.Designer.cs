@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ActorIdtextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Buscarbutton = new System.Windows.Forms.Button();
@@ -36,6 +37,8 @@
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.ActortextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.ActorerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ActorerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // ActorIdtextBox
@@ -65,6 +68,7 @@
             this.Buscarbutton.TabIndex = 13;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // Eliminarbutton
             // 
@@ -75,6 +79,7 @@
             this.Eliminarbutton.TabIndex = 12;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // Guardarbutton
             // 
@@ -85,6 +90,7 @@
             this.Guardarbutton.TabIndex = 11;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Nuevobutton
             // 
@@ -95,6 +101,7 @@
             this.Nuevobutton.TabIndex = 10;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // ActortextBox
             // 
@@ -114,6 +121,10 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Actor:";
             // 
+            // ActorerrorProvider
+            // 
+            this.ActorerrorProvider.ContainerControl = this;
+            // 
             // rActores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -128,7 +139,8 @@
             this.Controls.Add(this.ActortextBox);
             this.Controls.Add(this.label1);
             this.Name = "rActores";
-            this.Text = "rActores";
+            this.Text = "Registro Actores";
+            ((System.ComponentModel.ISupportInitialize)(this.ActorerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,5 +156,6 @@
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.TextBox ActortextBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider ActorerrorProvider;
     }
 }
