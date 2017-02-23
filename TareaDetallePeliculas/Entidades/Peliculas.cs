@@ -14,6 +14,14 @@ namespace TareaDetallePeliculas.Entidades
         public string Estrenos { get; set; }
         public string Descripcion { get; set; }
         public DateTime Fecha { get; set; }
+        public int ActorId { get; set; }
+        public virtual List<Actores> Actores { get; set; }
+
+        public Peliculas()
+        {
+            this.Actores = new List<Actores>();
+        }      
+
 
     }
 }

@@ -10,10 +10,13 @@ namespace TareaDetallePeliculas.Entidades
     {
         [Key]
         public int ActorId { get; set; }
+        public string ActorNombres { get; set; }
+        public virtual List<Peliculas> Peliculas { get; set; }
 
-        public string Nombres { get; set; }
-
-
+        public Actores()
+        {
+            this.Peliculas = new List<Peliculas>();
+        }
 
     }
 }
