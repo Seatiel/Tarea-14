@@ -30,9 +30,10 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroActoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroPeliculasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaPeliculasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,12 +58,6 @@
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.registrosToolStripMenuItem.Text = "Registros";
             // 
-            // consultasToolStripMenuItem
-            // 
-            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
-            this.consultasToolStripMenuItem.Text = "Consultas";
-            // 
             // registroActoresToolStripMenuItem
             // 
             this.registroActoresToolStripMenuItem.Name = "registroActoresToolStripMenuItem";
@@ -76,6 +71,21 @@
             this.registroPeliculasToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.registroPeliculasToolStripMenuItem.Text = "Registro Peliculas";
             this.registroPeliculasToolStripMenuItem.Click += new System.EventHandler(this.registroPeliculasToolStripMenuItem_Click);
+            // 
+            // consultasToolStripMenuItem
+            // 
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultaPeliculasToolStripMenuItem});
+            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
+            this.consultasToolStripMenuItem.Text = "Consultas";
+            // 
+            // consultaPeliculasToolStripMenuItem
+            // 
+            this.consultaPeliculasToolStripMenuItem.Name = "consultaPeliculasToolStripMenuItem";
+            this.consultaPeliculasToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.consultaPeliculasToolStripMenuItem.Text = "Consulta Peliculas";
+            this.consultaPeliculasToolStripMenuItem.Click += new System.EventHandler(this.consultaPeliculasToolStripMenuItem_Click);
             // 
             // FormularioPrincipal
             // 
@@ -100,6 +110,7 @@
         private System.Windows.Forms.ToolStripMenuItem registroActoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroPeliculasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaPeliculasToolStripMenuItem;
     }
 }
 

@@ -27,5 +27,11 @@ namespace TareaDetallePeliculas
             UI.Registros.rPeliculas rp = new UI.Registros.rPeliculas();
             rp.Show();
         }
+
+        private void consultaPeliculasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Consultas.cPeliculas cp = new UI.Consultas.cPeliculas();
+            cp.Show();
+        }
     }
 }

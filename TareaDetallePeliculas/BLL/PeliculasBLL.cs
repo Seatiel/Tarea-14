@@ -179,5 +179,23 @@ namespace TareaDetallePeliculas.BLL
             }
         }
 
+        //public static List<Peliculas> GetListNombreActores(string actores)
+        //{
+        //    List<Peliculas> lista = new List<Peliculas>();
+        //    using (var db = new DetallePeliculasDb())
+        //    {
+        //        try
+        //        {
+        //            lista = db.Pelicula.Where(p => p. == actores).ToList();
+        //        }
+        //        catch (Exception)
+        //        {
+
+        //            throw;
+        //        }
+        //        return lista;
+        //    }
+        //}
+
     }
 }

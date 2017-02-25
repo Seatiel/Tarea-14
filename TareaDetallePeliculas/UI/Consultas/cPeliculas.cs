@@ -15,5 +15,47 @@ namespace TareaDetallePeliculas.UI.Consultas
         {
             InitializeComponent();
         }
+
+        private void cPeliculas_Load(object sender, EventArgs e)
+        {
+            LlenarCombo();
+        }
+
+        private bool Validar()
+        {
+            if (string.IsNullOrEmpty(FiltartextBox.Text))
+            {
+                FiltrarerrorProvider.SetError(FiltartextBox, "Por favor llenar campos.");
+                return true;
+            }
+            return false;
+        }
+
+        public void LlenarCombo()
+        {
+            FiltrarcomboBox.Items.Insert(0, "Todos");
+            FiltrarcomboBox.Items.Insert(1, "Actores");
+            FiltrarcomboBox.DataSource = FiltrarcomboBox.Items;
+            FiltrarcomboBox.DisplayMember = "Todos";
+        }
+
+        public void FiltrarOpcion()
+        {
+            if (FiltrarcomboBox.SelectedIndex == 0)
+            {
+                PeliculasdataGridView.DataSource = BLL.PeliculasBLL.GetList();
+            }
+            if (FiltrarcomboBox.SelectedIndex == 1)
+            {
+                //PeliculasdataGridView.DataSource = BLL.ActoresBLL.GetListNombre();
+            }
+        }
+
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+            FiltrarOpcion();
+        }
+
+
     }
 }
